@@ -29,5 +29,4 @@ export default function(){
             'is status 200': (r) => r.status === 200,
             'is resp body has username': (r) => r.body.includes('kminchelle')
     })
-
 }

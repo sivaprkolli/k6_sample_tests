@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { check, group, sleep } from 'k6';
+
 export const options = {
   stages: [
     { duration: '1m', target: 100 }, // simulate ramp-up of traffic from 1 to 100 users over 1 minute.
@@ -10,6 +11,7 @@ export const options = {
     http_req_duration: ['p(90)<2500'], // 90% of requests must complete below 2.5s
   },
 };
+
 export default () => {
   const res = http.get(`https://test-api.k6.io/public/crocodiles/`, {
   });           //call the api and set the response to res
