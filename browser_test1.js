@@ -2,8 +2,8 @@ import { chromium } from 'k6/experimental/browser';
 import { sleep } from 'k6';
 
 export default async function () {
-  const res_browser = `${K6_BROWSER_ENABLED}`;
-  res_browser = true;
+  // const res_browser = `${K6_BROWSER_ENABLED}`;
+  // res_browser = true;
 
   const browser = chromium.launch({ headless: true });
   const page = browser.newPage();
